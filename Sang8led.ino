@@ -19,7 +19,19 @@ void loop() {
   /*
     Tắt tuần tự các đèn LED
   */
-  for (int i = pinCount - 1 ;i >= 0; i--) {
+  for (int i = 0 ;i < pinCount ; i++) {
+    digitalWrite(ledPin[i],LOW); // Tắt đèn
+    delay(500); // Dừng để các đèn LED tắt dần
+  }
+   for (int i= 0 ; i < pinCount; i++) {
+    digitalWrite(ledPin[i],HIGH); //Bật đèn
+    delay(500); // Dừng để các đèn LED sáng dần
+  }
+  
+  /*
+    Tắt tuần tự các đèn LED
+  */
+  for (int i = 0 ;i < pinCount; i++) {
     digitalWrite(ledPin[i],LOW); // Tắt đèn
     delay(500); // Dừng để các đèn LED tắt dần
   }
